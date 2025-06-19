@@ -17,7 +17,7 @@ jobs:
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
+          ssh-private-key: ${{ secrets.AZURE_TOKEN }}
 
       - name: Deploy to stage server
         if: ${{ github.ref == 'refs/heads/stage' }}
